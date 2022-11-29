@@ -1,0 +1,65 @@
+  <!-- <div fxLayout="row"> -->
+    <div fxLayout="65%" class="video-detail center">
+        <div fxLayout="column" fxLayoutGap="8px">
+            <app-video-player *ngIf="videoAvailable" [videoUrl]="videoUrl"></app-video-player>
+            <div class="mat-title">{{videoTitle}}</div>
+            
+            <div fxLayout="row">
+                <div fxLayout="50%">
+                    <span class="view-count">{{viewCount}}</span>
+                    <span class="dot"></span>
+                    <span class="video-upload-date">Apr 13,2021</span>
+                 </div>
+                 <div fxLayout="50%" fxLayoutAlign="end">
+                    <span class="like-dislike-section">
+                        <button mat-icon-button class="thumbs-up" (click)="LikeVideo()">
+                            <mat-icon>thumb_up_off_alt</mat-icon>
+                            {{likeCount}}
+                        </button>
+                        <button mat-icon-button class="thumbs_down" (click)="disLikeVideo()">
+                            <mat-icon>thumb_down_off_alt</mat-icon>
+                            {{dislikeCount}}
+                        </button>
+                    </span>
+                 </div>
+               </div>
+               <mat-divider></mat-divider>
+               <mat-card-header>
+                <mat-card-title>Video Streaming</mat-card-title>
+                <mat-card-subtitle class="subtitles">4.2K Subscribers</mat-card-subtitle>
+                <button *ngIf="showSubscribeButton" class="subscribe-button" mat-raised-button color="warn"
+                (click)="subscribeToUser()">SUBSCRIBE</button>
+                <button *ngIf="showUnSubscribeButton" class="subscribe-button-clicked" mat-raised-button color="accent"
+                (click) = "UnSubscribeToUser()">
+                    UNSUBSCRIBE
+                </button>
+               </mat-card-header>
+               <div>{{videoDescription}}</div>
+               <mat-divider></mat-divider>
+              
+               <mat-divider></mat-divider>
+               <app-comments [videoId]= "videoId"></app-comments>
+              </div>
+           </div>
+           <div fxLayout="5%">
+            <div fxLayout="30%" class="suggestion-bar">
+           </div>
+         </div>
+
+  <!-- </div> -->
+
+-->
+
+   <!-- <mat-chip-list>
+                <mat-chip>Spring Boot</mat-chip>
+                <mat-chip>Angular</mat-chip>
+               </mat-chip-list>
+
+
+                  
+ 
+<!--  
+ <div fxLayout="100%" class="video-detail" >
+    <app-video-player *ngIf="videoAvailable" [videoUrl]="videoUrl"></app-video-player>
+    <div class="mat-title">{{videoTitle}}</div>
+ </div> -->

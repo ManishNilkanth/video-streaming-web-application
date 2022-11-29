@@ -1,0 +1,11 @@
+.example-card {
+    width: 330px;
+    height: 300px;
+    border: 2px solid rgb(0, 2, 140);
+  }
+  
+  .example-header-image {
+    background-image: url("../../assets/photo.jpeg");
+    background-size: cover;
+  }
+  
